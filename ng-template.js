@@ -1,5 +1,7 @@
 /*global System:false, exports:false */
 
+var serverRelativeRegexp = /^\w+:\/\/[^\/]*/;
+
 function santiseSource( source ) {
   return source.replace( /(['\\])/g, '\\$1' )
     .replace( /[\f]/g, '\\f' )
@@ -11,8 +13,21 @@ function santiseSource( source ) {
     .replace( /[\u2029]/g, '\\u2029' );
 }
 
+function resolveUrl( address, baseUrl, useServerRelative ) {
+  if ( useServerRelative ) {
+    return address.replace( serverRelativeRegexp, '' );
+
+  } else if ( baseUrl && address.indexOf( baseUrl ) === 0 ) {
+    return address.substr( baseUrl.length );
+  }
+  return address;
+}
+
 exports.translate = function( load ) {
-  var url = typeof System.baseURL === 'string' && load.address.indexOf( System.baseURL ) === 0 ? load.address.substr( System.baseURL.length ) : load.address;
+  var baseUrl = typeof System.baseURL === 'string' ? System.baseURL : '',
+    options = System.ngTemplatePlugin || {},
+    url = resolveUrl( load.address, baseUrl, !!options.serverRelative );
+
   return "require('angular').module('ng')" +
     ".run(['$templateCache', function(c) { c.put('" + url + "', '" + santiseSource( load.source ) + "') }]);" +
     "module.exports = { templateUrl: '" + url + "' };";
