@@ -1,4 +1,7 @@
 {
   "extends": "idiomatic",
-  "root": true
+  "root": true,
+  "rules": {
+    "quotes": [2, "single", "avoid-escape"]
+  }
 }

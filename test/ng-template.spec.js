@@ -6,7 +6,7 @@ describe( 'ng-template', function ngTemplateTests() {
     System.import( 'angular' ).then( function( ng ) {
       angular = ng;
 
-      return System.import( 'angular-mocks' ).then( function() {});
+      return System.import( 'angular-mocks' ).then( function() {} );
     } )
     .then( done, done );
   } );
@@ -18,14 +18,13 @@ describe( 'ng-template', function ngTemplateTests() {
       .then( function( templateExports ) {
         var ngTemplateCache;
 
-        angular.module('tester', []);
-        angular.mock.module('tester');
+        angular.module( 'tester', [] );
+        angular.mock.module( 'tester' );
         angular.mock.inject( function( $templateCache ) {
           ngTemplateCache = $templateCache;
         } );
 
         expect( ngTemplateCache.get( testTemplateUrl ) ).to.equal( '<p>Hello world</p>\n' );
-        expect( templateExports.template ).to.equal( '<p>Hello world</p>\n' );
         expect( templateExports.templateUrl ).to.equal( testTemplateUrl );
       } )
       .then( done, done );
