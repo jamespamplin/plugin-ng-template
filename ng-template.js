@@ -1,7 +1,7 @@
 /*global System:false, exports:false */
 
 function santiseSource( source ) {
-  return source.replace( /(["\\])/g, '\\$1' )
+  return source.replace( /(['\\])/g, '\\$1' )
     .replace( /[\f]/g, '\\f' )
     .replace( /[\b]/g, '\\b' )
     .replace( /[\n]/g, '\\n' )

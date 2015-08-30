@@ -24,7 +24,7 @@ describe( 'ng-template', function ngTemplateTests() {
           ngTemplateCache = $templateCache;
         } );
 
-        expect( ngTemplateCache.get( testTemplateUrl ) ).to.equal( '<p>Hello world</p>\n' );
+        expect( ngTemplateCache.get( testTemplateUrl ) ).to.equal( '<p>Hello "world\'s"</p>\n' );
         expect( templateExports.templateUrl ).to.equal( testTemplateUrl );
       } )
       .then( done, done );
