@@ -15,9 +15,13 @@ System.config({
 
   map: {
     "angular": "github:angular/bower-angular@1.4.5",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.4.5",
     "babel": "npm:babel-core@5.8.23",
     "babel-runtime": "npm:babel-runtime@5.8.20",
     "core-js": "npm:core-js@1.1.3",
+    "github:angular/bower-angular-mocks@1.4.5": {
+      "angular": "github:angular/bower-angular@1.4.5"
+    },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
     },

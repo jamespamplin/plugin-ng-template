@@ -5,18 +5,28 @@ describe( 'ng-template', function ngTemplateTests() {
   before( function( done ) {
     System.import( 'angular' ).then( function( ng ) {
       angular = ng;
-    } ).then( done, done );
+
+      return System.import( 'angular-mocks' ).then( function() {});
+    } )
+    .then( done, done );
   } );
 
-  it( 'should see SystemJS', function() {
-    expect( System ).to.be.an( 'object' );
-    expect( System.import ).to.be.a( 'function' );
-  } );
 
   it( 'should load template into cache via plugin', function( done ) {
-    System.import( 'test/fixtures/test-template.html!ng-template' )
+    var testTemplateUrl = 'test/fixtures/test-template.html';
+    System.import( testTemplateUrl + '!ng-template' )
       .then( function( templateExports ) {
+        var ngTemplateCache;
 
+        angular.module('tester', []);
+        angular.mock.module('tester');
+        angular.mock.inject( function( $templateCache ) {
+          ngTemplateCache = $templateCache;
+        } );
+
+        expect( ngTemplateCache.get( testTemplateUrl ) ).to.equal( '<p>Hello world</p>\n' );
+        expect( templateExports.template ).to.equal( '<p>Hello world</p>\n' );
+        expect( templateExports.templateUrl ).to.equal( testTemplateUrl );
       } )
       .then( done, done );
   } );
