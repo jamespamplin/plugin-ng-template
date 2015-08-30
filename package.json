@@ -4,7 +4,8 @@
   "description": "SystemJS plugin for loading and caching angular templates",
   "main": "ng-template.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "keywords": [
     "ng-template",
@@ -14,5 +15,9 @@
     "loader"
   ],
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-idiomatic": "~0.2.0",
+    "eslint": "~1.3.1"
+  }
 }
