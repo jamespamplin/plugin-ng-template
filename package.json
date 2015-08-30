@@ -1,0 +1,18 @@
+{
+  "name": "plugin-ng-template",
+  "version": "0.0.0",
+  "description": "SystemJS plugin for loading and caching angular templates",
+  "main": "ng-template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ng-template",
+    "systemjs",
+    "jspm",
+    "plugin",
+    "loader"
+  ],
+  "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
+  "license": "MIT"
+}
