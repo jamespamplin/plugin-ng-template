@@ -12,7 +12,9 @@ module.exports = function karmaConfig( config ) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/jspm_packages/system-polyfills.js',
+      { pattern: 'test/jspm_packages/**/*', included: false, served: true, watched: false, nocache: true },
+      { pattern: 'test/fixtures/**/*', included: false, served: true, watched: false, nocache: true },
+      { pattern: 'ng-template.js', included: false, served: true },
       'test/jspm_packages/system.js',
       'test/jspm.config.js',
       'test/**/*.spec.js'
