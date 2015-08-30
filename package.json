@@ -4,8 +4,10 @@
   "description": "SystemJS plugin for loading and caching angular templates",
   "main": "ng-template.js",
   "scripts": {
+    "postinstall": "cd test && jspm install",
     "lint": "eslint .",
-    "test": "npm run lint"
+    "karma": "cd test && karma start",
+    "test": "npm run lint && npm run karma"
   },
   "keywords": [
     "ng-template",
@@ -17,7 +19,15 @@
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "~1.3.1",
     "eslint-config-idiomatic": "~0.2.0",
-    "eslint": "~1.3.1"
+    "jspm": "~0.16.2",
+    "karma": "~0.13.9",
+    "karma-mocha": "~0.2.0",
+    "karma-phantomjs-launcher": "~0.2.1",
+    "mocha": "~2.2.5",
+    "phantomjs": "~1.9.18",
+    "chai": "~3.2.0",
+    "karma-chai": "~0.1.0"
   }
 }

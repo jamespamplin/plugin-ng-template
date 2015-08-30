@@ -1,0 +1,14 @@
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "..",
+      "packages": "jspm_packages"
+    },
+    "configFile": "jspm.config.js",
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.1.0"
+    }
+  }
+}
