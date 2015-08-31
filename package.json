@@ -16,6 +16,9 @@
     "plugin",
     "loader"
   ],
+  "files": [
+    "ng-template.js"
+  ],
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
   "repository": "https://github.com/jamespamplin/plugin-ng-template.git",
   "license": "MIT",
