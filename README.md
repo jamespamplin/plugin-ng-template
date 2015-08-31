@@ -3,6 +3,17 @@
 
 Inspired by [ngtemplate-loader](https://github.com/WearyMonkey/ngtemplate-loader) for Webpack.
 
+## Installation
+Easiest to install and configure with [JSPM](http://jspm.io/).
+
+Installing with JSPM via npm repo:
+
+    jspm install ng-template=npm:plugin-ng-template
+
+Installing with JSPM via github repo:
+
+    jspm install ng-template=github:jamespamplin/plugin-ng-template
+
 ## Usage
 Importing or requiring an angular `html` template with `!ng-template` appended
 to the end will invoke the plugin, and load the html source into angular's
