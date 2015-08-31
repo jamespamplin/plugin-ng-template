@@ -4,7 +4,7 @@
   "description": "SystemJS / JSPM plugin for loading and caching angular templates",
   "main": "ng-template.js",
   "scripts": {
-    "postinstall": "cd test && jspm install",
+    "pretest": "cd test && jspm install",
     "lint": "eslint .",
     "karma": "cd test && karma start",
     "test": "npm run lint && npm run karma"
