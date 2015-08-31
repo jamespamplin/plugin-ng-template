@@ -1,7 +1,7 @@
 {
   "name": "plugin-ng-template",
   "version": "0.0.0",
-  "description": "SystemJS plugin for loading and caching angular templates",
+  "description": "SystemJS / JSPM plugin for loading and caching angular templates",
   "main": "ng-template.js",
   "scripts": {
     "postinstall": "cd test && jspm install",
