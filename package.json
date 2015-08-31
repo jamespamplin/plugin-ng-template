@@ -17,6 +17,7 @@
     "loader"
   ],
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
+  "repository": "https://github.com/jamespamplin/plugin-ng-template.git",
   "license": "MIT",
   "devDependencies": {
     "eslint": "~1.3.1",
