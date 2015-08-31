@@ -1,4 +1,7 @@
 # plugin-ng-template
+[![NPM](https://img.shields.io/npm/v/plugin-ng-template.svg)](https://www.npmjs.com/package/plugin-ng-template)
+[![Build](https://img.shields.io/travis/jamespamplin/plugin-ng-template.svg)](https://travis-ci.org/jamespamplin/plugin-ng-template)
+
 > SystemJS / JSPM plugin for loading and caching angular templates
 
 Inspired by [ngtemplate-loader](https://github.com/WearyMonkey/ngtemplate-loader) for Webpack.
